@@ -5,40 +5,33 @@ import seaborn as sns
 
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import train_test_split
 
+# Carga de datos
+df = pd.read_csv("medicion.csv")
 
-df = pd.read_csv('medicion.csv', encoding='cp1252', sep=',')
-df.info()
-df.describe()
-df.isnull().sum()
-sns.histplot(df["indice_de_calidad_de_limpieza_adaptado"], kde=True)
-plt.show()
-sns.lineplot(x="periodo", y="indice_de_calidad_de_limpieza_adaptado", data=df)
-plt.show()
-df_encoded = pd.get_dummies(df, columns=["estratificacion_geografica"], drop_first=True)
-train = df_encoded[df_encoded["periodo"].isin([2022, 2023])]
-test = df_encoded[df_encoded["periodo"] == 2024]
-X_train = train.drop(["indice_de_calidad_de_limpieza_adaptado"], axis=1)
-y_train = train["indice_de_calidad_de_limpieza_adaptado"]
+# Codificación de variables categóricas (AHORA INCLUYE periodo)
+df_encoded = pd.get_dummies(df, columns=["estratificacion_geografica", "periodo"], drop_first=True)
 
-X_test = test.drop(["indice_de_calidad_de_limpieza_adaptado"], axis=1)
-y_test = test["indice_de_calidad_de_limpieza_adaptado"]
+# Variables independientes y dependiente
+X = df_encoded.drop(["indice_de_calidad_de_limpieza_adaptado"], axis=1)
+y = df_encoded["indice_de_calidad_de_limpieza_adaptado"]
+
+# Separación correcta
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Modelo
 modelo = LinearRegression()
 modelo.fit(X_train, y_train)
+
+# Predicción
 y_pred = modelo.predict(X_test)
+
+# Evaluación
 mse = mean_squared_error(y_test, y_pred)
-print("MSE:", mse)
 rmse = np.sqrt(mse)
+
+print("MSE:", mse)
 print("RMSE:", rmse)
-
-plt.scatter(y_test, y_pred)
-plt.xlabel("Valor real")
-plt.ylabel("Predicción")
-plt.title("Real vs Predicho")
-plt.show()
-predicciones_2024 = pd.DataFrame({
-    "Real": y_test,
-    "Predicho": y_pred
-})
-
-print(predicciones_2024.head())
