@@ -8,6 +8,9 @@ El dataframe muestra el índice de calidad de limpieza adaptado a barrios vulner
 Cuenta con 4 columnas: medicion,periodo,estratificacion_geografica e indice_de_calidad_de_limpieza_adaptado.
 
 <strong>Medición</strong>: Número de orden de mediciones anuales.
+
 <strong>Periodo</strong>: Período de tiempo en el que se realizaron las mediciones.
+
 <strong>estratificacion_geografica</strong>: Niveles de estratificación del ICLa.
+
 <strong>indice_de_calidad_de_limpieza_adaptado</strong>: Valor del índice obtenido según estratificación.
