@@ -1,0 +1,49 @@
+medicion,periodo,estratificacion_geografica,indice_de_calidad_de_limpieza_adaptado
+1,Julio_noviembre_2022,Barrios Vulnerables,0.535
+1,Julio_noviembre_2022,Complejo Habitacional Fraga,0.679
+1,Julio_noviembre_2022,Fraga Historico,0.719
+1,Julio_noviembre_2022,Complejo Habitacional Papa Francisco,0.763
+1,Julio_noviembre_2022,Villa 20,0.359
+1,Julio_noviembre_2022,Complejo Habitacional Rodrigo Bueno,0.659
+1,Julio_noviembre_2022,Rodrigo Bueno Historico,0.792
+1,Julio_noviembre_2022,La Carbonilla,0.475
+1,Julio_noviembre_2022,Villa 21-24,0.372
+1,Julio_noviembre_2022,Barrio Inta,0.513
+1,Julio_noviembre_2022,Cildañez,0.729
+1,Julio_noviembre_2022,Barrio Padre Mugica (Ex Villa 31),0.491
+1,Julio_noviembre_2022,Villa Soldati,0.521
+1,Julio_noviembre_2022,Barrio Ricciardelli (Ex Villa 1-11-14),0.447
+1,Julio_noviembre_2022,Villa 15,0.567
+1,Julio_noviembre_2022,Complejo Habitacional Ypf,0.6
+2,Agosto_septiembre_2023,Barrios Vulnerables,0.477
+2,Agosto_septiembre_2023,Complejo Habitacional Fraga,0.607
+2,Agosto_septiembre_2023,Fraga Historico,0.5
+2,Agosto_septiembre_2023,Complejo Habitacional Papa Francisco,0.614
+2,Agosto_septiembre_2023,Villa 20,0.31
+2,Agosto_septiembre_2023,Complejo Habitacional Rodrigo Bueno,0.75
+2,Agosto_septiembre_2023,Rodrigo Bueno Historico,0.795
+2,Agosto_septiembre_2023,La Carbonilla,0.425
+2,Agosto_septiembre_2023,Villa 21-24,0.436
+2,Agosto_septiembre_2023,Barrio Inta,0.542
+2,Agosto_septiembre_2023,Cildañez,0.42
+2,Agosto_septiembre_2023,Barrio Padre Mugica (Ex Villa 31),0.405
+2,Agosto_septiembre_2023,Villa Soldati,0.349
+2,Agosto_septiembre_2023,Complejo Habitacional Villa 21-24,0.667
+2,Agosto_septiembre_2023,Barrio Charrua,0.25
+2,Agosto_septiembre_2023,Complejo Habitacional Ypf,0.636
+3,Agosto_octubre_2024,Barrios Vulnerables,0.455
+3,Agosto_octubre_2024,Complejo Habitacional Fraga,0.679
+3,Agosto_octubre_2024,Fraga Historico,0.75
+3,Agosto_octubre_2024,Complejo Habitacional Papa Francisco,0.364
+3,Agosto_octubre_2024,Barrio Ricciardelli (Ex Villa 1-11-14),0.458
+3,Agosto_octubre_2024,Complejo Habitacional Rodrigo Bueno,0.679
+3,Agosto_octubre_2024,Rodrigo Bueno Historico,0.9
+3,Agosto_octubre_2024,La Carbonilla,0.35
+3,Agosto_octubre_2024,Villa 21-24,0.426
+3,Agosto_octubre_2024,Barrio Inta,0.479
+3,Agosto_octubre_2024,Cildañez,0.411
+3,Agosto_octubre_2024,Barrio Padre Mugica (Ex Villa 31),0.398
+3,Agosto_octubre_2024,Villa Soldati,0.461
+3,Agosto_octubre_2024,Complejo Habitacional Villa 21-24,0.417
+3,Agosto_octubre_2024,Barrio Charrua,0.333
+3,Agosto_octubre_2024,Complejo Habitacional Ypf,0.446
