@@ -7,8 +7,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
   
-warnings.simplefilter("ignore")
-  
 df = pd.read_csv('medicion.csv', encoding='cp1252', sep=',')
   
   
@@ -59,6 +57,32 @@ sns.pairplot(df, hue='estratificacion_geografica', diag_kind='kde', palette='vir
 print('Correlación Pearson: ', df['indice_de_calidad_de_limpieza_adaptado'].corr(df['medicion'], method='pearson')) # -0.20 correlación negativa debil, signfica que no hay una correlación fuerte entre ambas columnas
 print('Correlación Spearman: ', df['indice_de_calidad_de_limpieza_adaptado'].corr(df['medicion'], method='spearman')) # -0.26 correlación negativa debil, signfica que no hay una correlación fuerte entre ambas columnas
 print('Correlación Kendall: ', df['indice_de_calidad_de_limpieza_adaptado'].corr(df['medicion'], method='kendall')) # -0.19 correlación negativa debil, signfica que no hay una correlación fuerte entre ambas columnas
+
+# Convertimos la variable categórica a variables dummy
+df_corr = pd.get_dummies(
+    df[["indice_de_calidad_de_limpieza_adaptado", "estratificacion_geografica"]],
+    drop_first=True
+)
+
+plt.figure(figsize=(12,6))
+
+sns.scatterplot(
+    data=df,
+    x='periodo',
+    y='indice_de_calidad_de_limpieza_adaptado',
+    hue='estratificacion_geografica',
+    palette='viridis',
+    s=100
+)
+
+plt.title("Índice de calidad de limpieza a través de los períodos")
+plt.xlabel("Período")
+plt.ylabel("Índice de calidad de limpieza")
+
+plt.legend(title='Estratificación geográfica')
+
+plt.show()
+
 #9. Análisis Bivariado
 var = 'indice_de_calidad_de_limpieza_adaptado'
 data = pd.concat([df['medicion'], df['indice_de_calidad_de_limpieza_adaptado']], axis = 1)
